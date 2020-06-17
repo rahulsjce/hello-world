@@ -1,0 +1,11 @@
+applications:
+- name: hello-world
+  instances: 1
+  memory: 1024M
+  disk_quota: 1024M
+  path: target/hello-world-rest-api.jar
+  routes:
+  - route: hello-world-telic-turnup.cfapps.io
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
+  stack: cflinuxfs3
